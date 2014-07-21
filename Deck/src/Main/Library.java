@@ -9,11 +9,10 @@ import javax.swing.ImageIcon;
 
 public class Library {
 
-	private Image Background, XDeck_Logo, Card_Library, Button, Highlight, Card;
+	private Image XDeck_Logo, Card_Library, Button, Highlight, Card;
 	public boolean mousehover;
 	
 	public Library(){
-	    Background = new ImageIcon("C:/Users/Administrator/Desktop/XDeck/cardback.png").getImage().getScaledInstance(1126, 726, 0);
 	    Card = new ImageIcon("C:/Users/Administrator/Desktop/XDeck/servantofthefirelord.png").getImage().getScaledInstance(250, 350, 0);
 	}
 	
@@ -27,7 +26,7 @@ public class Library {
 	
 	
 	public void draw(Graphics g){
-		g.drawImage(Background, 0, 0, null);
+		g.drawImage(GamePanel.Background, 0, 0, null);
 		g.drawImage(Card, 500, 226, null);
 	}
 }

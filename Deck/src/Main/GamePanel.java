@@ -28,10 +28,11 @@ public class GamePanel extends JPanel implements Runnable {
     private int x, y;
     public MainMenu m;
     private Library lib;
-
+    public static Image Background;
     
     public GamePanel(int xSize, int ySize){
     	
+	    Background = new ImageIcon("C:/Users/Owner/Desktop/XDeck/card elements/cardback.png").getImage().getScaledInstance(1126, 726, 0);
     	lib = new Library();
         m = new MainMenu();
         GWIDTH = xSize;
