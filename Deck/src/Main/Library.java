@@ -4,16 +4,24 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Rectangle;
 
 import javax.swing.ImageIcon;
 
+import CardLibrary.WaterAffinity.AzalWhelp;
+import CardStructure.Card;
+
 public class Library {
 
-	private Image XDeck_Logo, Card_Library, Button, Highlight, Card;
 	public boolean mousehover;
+	public Card card;
 	
 	public Library(){
-	    Card = new ImageIcon("C:/Users/Administrator/Desktop/XDeck/servantofthefirelord.png").getImage().getScaledInstance(250, 350, 0);
+		for(int i = 1; i < Card.cAmount; i++){
+			if(Card.id == 1){
+				System.out.println("HI");
+			}
+		}
 	}
 	
 	public void mousehover(int mx, int my, int x, int width, int y, int height){
@@ -27,6 +35,6 @@ public class Library {
 	
 	public void draw(Graphics g){
 		g.drawImage(GamePanel.Background, 0, 0, null);
-		g.drawImage(Card, 500, 226, null);
+	//	g.drawImage(card.cImage, 500, 226, null);
 	}
 }
